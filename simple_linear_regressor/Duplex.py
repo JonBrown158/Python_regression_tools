@@ -1,28 +1,25 @@
 import os
 import csv
-class mini_list:
-	def __init__(self, label, data = []):
-		self.label = label
-		self.data = data
-		self.index = []
-		i = 0
-		end = len(self.data)
-		self.place = end
-		while(i < end):
-			self.index.append(i)
-			i += 1
 
+class Loader:
 
-	def add_label(self, label):
-		self.label = label
-
-	def append_data(self, stuff):
-		self.data.append(stuff)
-		self.index.append(self.place)
-		self.place +=1
-
-	def get_data_point(self, place):
-		return self.data[place]
+	def __init__(self):
+		pass
+		
+	def loadDuplexFromFile(self, filename, pos1 = 0, pos2 = 1):		
+		data = Duplex()
+		with open(filename) as tempfile:
+			reader = csv.reader(tempfile, delimiter=",")
+			
+			i = 0
+			for line in reader:
+				if(i<1):
+					data.add_labels(line[pos1], line[pos2])
+				else:
+					data.extend(line[pos1], float(line[pos2]))
+				i +=1
+		tempfile.close()
+		return data
 
 class Duplex:
 
@@ -64,26 +61,6 @@ class Duplex:
 		self.second_label = second_label
 
 	
-##	def load_duplex(self, pathname):
-##		with open(pathname) as tempfile:
-##			reader = csv.reader(tempfile, delimieter=",")
-##			colums = 0
-##			self.lables = []
-##			self.table = []
-##			
-##			cnt = 0
-##			for line in reader:
-##				if(cnt < 1):
-##					columns = 0
-##					nextpos = line.nextpos()
-##					while(nextpos != "/n"):
-##						self.labels.append(nextpos)
-##						nextpos = line.nextpos()
-##						columns += 1
-##				
-##				cnt += 1
-##
-##		tempfile.close()
 
 
 

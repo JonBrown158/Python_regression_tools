@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 import numpy as np
 from Duplex import Duplex
-from Loader import Loader
+from Duplex import Loader
 
 
 
