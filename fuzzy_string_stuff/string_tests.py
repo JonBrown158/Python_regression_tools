@@ -16,7 +16,7 @@ import csv
 plt.style.use('fivethirtyeight')
 
 ## initialize table bring in information from deals folder 
-titles = Data_table('deals2',',')
+titles = Data_table('data',',')
 
 print("number of rows {}".format(titles.num_rows))
 
