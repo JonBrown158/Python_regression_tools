@@ -33,7 +33,7 @@ print("\n\n\n")
 ## string compairason done to 
 PriceCheck = True
 while(PriceCheck):
-	row = int(input('Pick the row you would like to run regression on. '))
+	row = int(input('Pick the row you would like to match strings on. '))
 	sensitivity = int(input('Pick the percent you would like the strings to match. '))
 
 	if(titles.rows[row][Price][0] != '$'):
@@ -68,7 +68,7 @@ while(i < titles.num_rows):
 x = np.array(index)
 y = np.array(prices)
 	
-linearRegression = int(input('Do you want to run linear regression '))
+linearRegression = int(input('Do you want to run linear regression (1) or ARIMA (2) '))
 
 if(linearRegression == 1):
     
