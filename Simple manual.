@@ -30,7 +30,9 @@ This is not saying that we cannot use non-stationary data, it means that we have
 By subtracting the current term by previous terms we can make the data stationary, and this is where the D term in the ARIMA(P, D, Q). 
 The larger the D term is the more terms are diffrenced from the first term, generally either the term behind it or two terms behind it. This makes it so that we are predicting the change in our data which should be stationary. 
 
-For P we are trying to find how the current terms are related to the previous ones, and to do this we make another assumption, that the current term is related to the last ones by a function resembling xt = (xt-1)(a) + (xt-2)(a2) + (xt-3)(a3) ... etc.  These coefficents labeled by me as "a" are what we are focused on finding with this part of the Modling. These terms are selected by finding the coeffiects that lead to the smallest error when used to find existing values. This still leaves information in the model that can be extracted in other ways. Thats why there is moving average. 
+For P we are trying to find how the current terms are related to the previous ones, and to do this we make another assumption, that the current term is related to the last ones by a function resembling   
+** xt = (xt-1)(a) + (xt-2)(a2) + (xt-3)(a3)  ...  + error **.  
+These coefficents labeled by me as "a" are what we are focused on finding with this part of the Modling. These terms are selected by finding the coeffiects that lead to the smallest error when used to find existing values. This still leaves information in the model that can be extracted in other ways. Thats why there is moving average. 
 
 For Q we are trying to deterimine if the error of the AutoRegressive part of this model may be modeled by a moving average function, and the number of terms we want to include in this model is what is denoted by Q. 
 
