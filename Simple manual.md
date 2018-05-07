@@ -1,11 +1,11 @@
-#Linear Regression and ARIMA analysis tools
+# Linear Regression and ARIMA analysis tools
 ## Simple users guide 
 ### Jonathan Brown
 
-####1. Where to put data
+#### 1. Where to put data
 There should be a folder in the repository called **Data**, any files that we are trying to preform regression should be placed into there. The python I have written pulls the data from that folder and loads it into itself from that folder. 
 
-####2. How to use the tools that have been provided.
+#### 2. How to use the tools that have been provided.
 Once time series data from the deals website has been added, regression can be preformed by running the **Regression_tools.py** .
 
 After that is completed you will be prompted for which row you would like  to prefom the string matches on, and preform basic checks that the intended row is not an advertisment.  
@@ -13,11 +13,11 @@ After that is completed you will be prompted for which row you would like  to pr
 Then it will ask if you would like to run linear regression, or ARIMA analysis.
 Pick 1 for linear or 2 for ARIMA.
 
-####3. Linear regression.
+#### 3. Linear regression.
 
 If linear regression was chosen the python will take the data points from the data file, and create a best fit line, then plot it against the data for compairason and give the values for the slope and intercept of the line that was created. 
 
-####4. ARIMA 
+#### 4. ARIMA 
 
 If ARIMA is chosen the next step in producing the analysis is to pick the paramaters you want for the regression. These are P which determines the amount of terms you want in the autoregressive portion of the equation, D the level of differencing you need to make the data stationary, and Q the amount of terms in the moving average part of the model. 
 
